@@ -27,13 +27,15 @@ public class Player2 : MonoBehaviour
             transform.Rotate(0, 0, Time.deltaTime * rotationSpeed, Space.Self);
         }
 
-
+        
 
         if (Input.GetKey("j"))
         {
             transform.Rotate(0, 0, Time.deltaTime * -rotationSpeed, Space.Self);
         }
     }
+    
+
 
 }
 

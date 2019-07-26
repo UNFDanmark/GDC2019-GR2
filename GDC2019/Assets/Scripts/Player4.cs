@@ -27,6 +27,7 @@ public class Player4 : MonoBehaviour
             transform.Rotate(0, 0, Time.deltaTime * rotationSpeed, Space.Self);
         }
 
+        
 
 
         if (Input.GetMouseButton(1))
@@ -34,6 +35,9 @@ public class Player4 : MonoBehaviour
             transform.Rotate(0, 0, Time.deltaTime * -rotationSpeed, Space.Self);
         }
     }
+
+
+    
 
 }
 

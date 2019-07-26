@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player3 : MonoBehaviour
-
 {
     Rigidbody rb;
     public float rotationSpeed = 50f;
