@@ -5,9 +5,9 @@ public class Bullets : MonoBehaviour
 {
     public Rigidbody projectile;
     public Transform Spawnpoint;
-    public float Speed = 1;
+    public float Speed = 10;
     float shootingtimer = 0;
-
+    public float BulletsPrSecond;
 
     // Use this for initialization
     void Start()
@@ -18,9 +18,9 @@ public class Bullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
 
-        if (shootingtimer > 0.3f)
+
+        if (shootingtimer > BulletsPrSecond)
         {
 
             Rigidbody clone;
@@ -28,8 +28,20 @@ public class Bullets : MonoBehaviour
 
             clone.velocity = Spawnpoint.TransformDirection(Vector3.up * Speed);
             shootingtimer = 0;
-           
+
         }
         shootingtimer += Time.deltaTime;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+
+
+
+            Destroy(gameObject);
+        }
+
     }
 }

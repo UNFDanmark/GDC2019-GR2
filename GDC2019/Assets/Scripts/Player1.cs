@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player4 : MonoBehaviour
+public class Player1 : MonoBehaviour
 
 {
     Rigidbody rb;
@@ -10,6 +10,7 @@ public class Player4 : MonoBehaviour
     public float speed = 10f;
     public GameObject GM;
     Collision cb;
+    public float bouncespeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,27 +25,33 @@ public class Player4 : MonoBehaviour
         rb.AddForce(transform.up * Time.deltaTime * speed, ForceMode.Force);
 
         //Controls rotation on the player
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey("a"))
         {
             transform.Rotate(0, 0, Time.deltaTime * rotationSpeed, Space.Self);
         }
 
 
 
-
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey("d"))
         {
             transform.Rotate(0, 0, Time.deltaTime * -rotationSpeed, Space.Self);
         }
+
+
+
+
+
     }
-
-
-
-    //Makes the player die to bullets and send a -1 player to GameMaster
-
-    void OnCollisionEnter(Collision collision)
+    //Makes the players bounce off each other
+        void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "Bullet")
+
+        if (collision.gameObject.tag == "player")
+            rb.AddForce(transform.up * bouncespeed, ForceMode.Force);
+
+       //Makes the player die to bullets and send a -1 player to GameMaster
+
+               if (collision.gameObject.tag == "Bullet")
             {
 
                 GM.GetComponent<GameMaster>().Updateplayercount();
@@ -54,10 +61,7 @@ public class Player4 : MonoBehaviour
 
         }
         }
-    }
-
-
     
 
-
+}
 

@@ -7,9 +7,9 @@ public class DeathController : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Bullet")
+        if (col.gameObject.tag == "Bullet") 
         {
-            //SceneManager.LoadScene("LevelName");
+            //GM.GetComponent<GameMaster>().Updateplayercount();
         }
     }
 }
