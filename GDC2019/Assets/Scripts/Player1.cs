@@ -51,7 +51,7 @@ public class Player1 : MonoBehaviour
             */
        //Makes the player die to bullets and send a -1 player to GameMaster
 
-               if (collision.gameObject.tag == "Bullet")
+               if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
             {
 
                 GM.GetComponent<GameMaster>().Updateplayercount();
