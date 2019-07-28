@@ -44,8 +44,8 @@ public class Player4 : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "Bullet")
-            {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
+        {
 
                 GM.GetComponent<GameMaster>().Updateplayercount();
 
