@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bullets : MonoBehaviour
+public class Bullets1 : MonoBehaviour
 {
     public Rigidbody projectile;
     public Transform Spawnpoint;
@@ -19,7 +19,7 @@ public class Bullets : MonoBehaviour
     void Update()
     {
 
-
+        
         if (shootingtimer > BulletsPrSecond)
         {
 
