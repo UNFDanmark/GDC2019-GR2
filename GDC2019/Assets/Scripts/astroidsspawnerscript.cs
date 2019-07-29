@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿                                        using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +26,6 @@ public class astroidsspawnerscript : MonoBehaviour
         if (timeleft <= 0)
         {
             timeleft = time;
-            print("spawn commet");
             int selector = Random.Range(0, 4);
             if (selector == 0)
             {
