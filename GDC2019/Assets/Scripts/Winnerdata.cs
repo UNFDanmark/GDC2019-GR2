@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Winnerdata : MonoBehaviour
+public static class Winnerdata 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static string winner;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static int player1place;
+    public static int player2place;
+    public static int player3place;
+    public static int player4place;
+
+    public static float dethtimeplayer1;
+    public static float dethtimeplayer2;
+    public static float dethtimeplayer3;
+    public static float dethtimeplayer4;
+
+    public static int klllsbyplayer1;
+    public static int klllsbyplayer2;
+    public static int klllsbyplayer3;
+    public static int klllsbyplayer4;
 }
+

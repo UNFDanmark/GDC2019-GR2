@@ -84,6 +84,22 @@ public class Player4 : MonoBehaviour
 
             if (Health == 1)
             {
+                if (collision.gameObject.name == "Bullet1 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer1 = 1+Winnerdata.klllsbyplayer1;
+                }
+                if (collision.gameObject.name == "Bullet2 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer2 = 1 + Winnerdata.klllsbyplayer2;
+                }
+                if (collision.gameObject.name == "Bullet3 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer3 = 1 + Winnerdata.klllsbyplayer3;
+                }
+                if (collision.gameObject.name == "Bullet4 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer4 = Winnerdata.klllsbyplayer4;
+                }
                 Destroy(gameObject);
                 GM.GetComponent<GameMaster>().Updateplayercount("player4");
             }
