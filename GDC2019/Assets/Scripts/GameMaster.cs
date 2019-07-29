@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
     public float startofgame;
+    public float Cameraspeed = 10f;
 
     public int Playercount = 4;
  
@@ -52,6 +53,9 @@ public class GameMaster : MonoBehaviour
             print("spiller 3 drab: " + Winnerdata.klllsbyplayer3);
             print("spiller 4 drab: " + Winnerdata.klllsbyplayer4);
         }
+
+
+
 
     }
 }

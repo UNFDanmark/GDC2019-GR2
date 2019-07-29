@@ -83,9 +83,9 @@ public class Player2 : MonoBehaviour
                 {
                     Winnerdata.klllsbyplayer1 = 1+ Winnerdata.klllsbyplayer1;
                 }
-                if (collision.gameObject.name == "Bullet2 (Clone)")
+                //if (collision.gameObject.name == "Bullet2 (Clone)")
                 {
-                    Winnerdata.klllsbyplayer2 = Winnerdata.klllsbyplayer2;
+                 //   Winnerdata.klllsbyplayer2 = Winnerdata.klllsbyplayer2;
                 }
                 if (collision.gameObject.name == "Bullet3 (Clone)")
                 {
