@@ -33,15 +33,14 @@ public class Bullets1 : MonoBehaviour
         shootingtimer += Time.deltaTime;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision a)
     {
-        if (collision.gameObject.tag == "Wall")
-        {
 
 
 
-            Destroy(gameObject);
-        }
+
+        Destroy(this.gameObject);
+
 
     }
 }
