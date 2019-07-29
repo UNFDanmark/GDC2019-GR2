@@ -10,11 +10,23 @@ public class Player2 : MonoBehaviour
     public float speed = 10f;
     public GameObject GM;
     Collision cb;
+    public float Health = 2;
+    public Material FlashMaterial;
+    public float time = 0.5f;
+    public float timeleft;
+    bool Flipper;
+    Renderer rd;
+    public Material StandardMaterial;
+    int FlashAmount;
+    public int Flashes = 6;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rd = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -34,26 +46,66 @@ public class Player2 : MonoBehaviour
         }
 
 
+        if (Health == 1)
+        {
+            timeleft = timeleft - Time.deltaTime;
+            if (timeleft <= 0 && FlashAmount < Flashes)
+            {
+                Flipper = !Flipper;
+                timeleft = time;
 
+
+                if (Flipper == true)
+                {
+                    rd.material = StandardMaterial;
+                    FlashAmount = FlashAmount + 1;
+                }
+                if (Flipper == false)
+                {
+                    rd.material = FlashMaterial;
+                }
+            }
+        }
 
 
     }
     //Makes the player die to bullets and send a -1 player to GameMaster
     void OnCollisionEnter(Collision collision)
-        {
+    {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
         {
 
-                GM.GetComponent<GameMaster>().Updateplayercount();
+            if (Health == 1)
+            {
+                Destroy(gameObject);
+                GM.GetComponent<GameMaster>().Updateplayercount("player2");
+                if (collision.gameObject.name == "Bullet1 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer1 = 1+ Winnerdata.klllsbyplayer1;
+                }
+                if (collision.gameObject.name == "Bullet2 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer2 = Winnerdata.klllsbyplayer2;
+                }
+                if (collision.gameObject.name == "Bullet3 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer3 = 1 + Winnerdata.klllsbyplayer3;
+                }
+                if (collision.gameObject.name == "Bullet4 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer4 = 1 + Winnerdata.klllsbyplayer4; 
+                }
+            }
 
-            Destroy(gameObject);
+            Health = Health - 1;
 
 
         }
-        }
 
-    
+
+    }
 }
+        
 
 
 

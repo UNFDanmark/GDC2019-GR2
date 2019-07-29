@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Meteor : MonoBehaviour
+public class Backtogame : MonoBehaviour
 {
-    public Vector3 direction= new Vector3();
     // Start is called before the first frame update
     void Start()
     {
-        //direction.z = -Random.Range(2f, 3f);
+        print(Winnerdata.winner);
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody>().velocity = direction;
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Demo");
+        }
     }
 }

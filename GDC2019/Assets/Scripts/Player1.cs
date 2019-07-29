@@ -10,58 +10,107 @@ public class Player1 : MonoBehaviour
     public float speed = 10f;
     public GameObject GM;
     Collision cb;
-    public float bouncespeed = 10f;
+    public float Health = 2;
+    public Material FlashMaterial;
+    public float time = 0.5f;
+    public float timeleft;
+    bool Flipper;
+    Renderer rd;
+    public Material StandardMaterial;
+    int FlashAmount;
+    public int Flashes = 6;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rd = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         //Makes the player go forward constantly
+        //rb.velocity = transform.up * Time.deltaTime * speed;
         rb.AddForce(transform.up * Time.deltaTime * speed, ForceMode.Force);
-
         //Controls rotation on the player
         if (Input.GetKey("a"))
         {
             transform.Rotate(0, 0, Time.deltaTime * rotationSpeed, Space.Self);
         }
-
-
-
         if (Input.GetKey("d"))
         {
             transform.Rotate(0, 0, Time.deltaTime * -rotationSpeed, Space.Self);
         }
 
+        if (Health == 1)
+        {
+            timeleft = timeleft - Time.deltaTime;
+            if (timeleft <= 0 && FlashAmount < Flashes)
+            {
+                  Flipper = !Flipper;
+                timeleft = time;
+                print(Flipper);
 
+                if (Flipper == true)
+                {
+                    rd.material = StandardMaterial;
+                    FlashAmount = FlashAmount + 1;
+                }
+                if (Flipper == false)
+                {
+                    rd.material = FlashMaterial;
+                }
+            }
+        }
+    
+
+     
 
 
 
     }
-    //Makes the players bounce off each other
-        void OnCollisionEnter(Collision collision)
+    //Makes the player die to bullets and send a -1 player to GameMaster
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
         {
 
-       /* if (collision.gameObject.tag == "player")
-            rb.AddForce(transform.up * bouncespeed, ForceMode.Force);
-            */
-       //Makes the player die to bullets and send a -1 player to GameMaster
 
-               if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
+            if (Health == 1)
             {
+                Destroy(gameObject);
+                GM.GetComponent<GameMaster>().Updateplayercount("player1");
+                if(collision.gameObject.name == "Bullet1 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer1 = Winnerdata.klllsbyplayer1;
+                }
+                if (collision.gameObject.name == "Bullet2 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer2 = 1+ Winnerdata.klllsbyplayer2;
+                }
+                if (collision.gameObject.name == "Bullet3 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer3 = 1+ Winnerdata.klllsbyplayer3;
+                }
+                if (collision.gameObject.name == "Bullet4 (Clone)")
+                {
+                    Winnerdata.klllsbyplayer4 =1+ Winnerdata.klllsbyplayer4;
+                }
+            }
 
-                GM.GetComponent<GameMaster>().Updateplayercount();
-
-            Destroy(gameObject);
-
+            Health = Health - 1;
 
         }
-        }
-    
+    }
+
 
 }
+
+
+
+
+
+
 
