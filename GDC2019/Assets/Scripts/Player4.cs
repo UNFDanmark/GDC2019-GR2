@@ -10,11 +10,23 @@ public class Player4 : MonoBehaviour
     public float speed = 10f;
     public GameObject GM;
     Collision cb;
+    public float Health = 2;
+    public Material FlashMaterial;
+    public float time = 0.5f;
+    public float timeleft;
+    bool Flipper;
+    Renderer rd;
+    public Material StandardMaterial;
+    int FlashAmount;
+    public int Flashes = 6;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rd = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -36,8 +48,31 @@ public class Player4 : MonoBehaviour
         {
             transform.Rotate(0, 0, Time.deltaTime * -rotationSpeed, Space.Self);
         }
-    }
 
+
+
+
+        if (Health == 1)
+        {
+            timeleft = timeleft - Time.deltaTime;
+            if (timeleft <= 0 && FlashAmount < 6)
+            {
+                Flipper = !Flipper;
+                timeleft = time;
+
+
+                if (Flipper == true)
+                {
+                    rd.material = StandardMaterial;
+                    FlashAmount = FlashAmount + 1;
+                }
+                if (Flipper == false)
+                {
+                    rd.material = FlashMaterial;
+                }
+            }
+        }
+    }
 
 
     //Makes the player die to bullets and send a -1 player to GameMaster
