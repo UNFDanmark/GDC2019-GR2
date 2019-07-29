@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMaster : MonoBehaviour
+public class Backtogame : MonoBehaviour
 {
-    public int Playercount = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +12,11 @@ public class GameMaster : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Updateplayercount(string playername)
+    void Update()
     {
-        Playercount = Playercount - 1;
-
-        if (Playercount == 1)
+        if (Input.GetKey(KeyCode.Space))
         {
-            print(playername);
-            SceneManager.LoadScene("Winscreen");
+            SceneManager.LoadScene("Demo");
         }
     }
 }

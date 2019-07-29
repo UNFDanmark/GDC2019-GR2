@@ -44,4 +44,5 @@ public class Bullets2 : MonoBehaviour
         }
 
     }
+
 }

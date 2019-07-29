@@ -81,7 +81,7 @@ public class Player3 : MonoBehaviour
             if (Health == 1)
             {
                 Destroy(gameObject);
-                GM.GetComponent<GameMaster>().Updateplayercount();
+                GM.GetComponent<GameMaster>().Updateplayercount("player3");
             }
 
             Health = Health - 1;
