@@ -84,9 +84,9 @@ public class Player1 : MonoBehaviour
                 GM.GetComponent<GameMaster>().Updateplayercount("player1");
                 if(collision.gameObject.name == "Bullet1 (Clone)")
                 {
-                    Winnerdata.klllsbyplayer1 = Winnerdata.klllsbyplayer1;
+                   // Winnerdata.klllsbyplayer1 = Winnerdata.klllsbyplayer1;
                 }
-                if (collision.gameObject.name == "Bullet2 (Clone)")
+                //if (collision.gameObject.name == "Bullet2 (Clone)")
                 {
                     Winnerdata.klllsbyplayer2 = 1+ Winnerdata.klllsbyplayer2;
                 }
