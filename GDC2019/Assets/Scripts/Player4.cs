@@ -78,21 +78,25 @@ public class Player4 : MonoBehaviour
     //Makes the player die to bullets and send a -1 player to GameMaster
 
     void OnCollisionEnter(Collision collision)
-        {
+    {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
         {
 
+            if (Health == 1)
+            {
+                Destroy(gameObject);
                 GM.GetComponent<GameMaster>().Updateplayercount();
+            }
 
-            Destroy(gameObject);
-
+            Health = Health - 1;
 
         }
-        }
+
+
     }
+}
 
 
-    
 
 
 

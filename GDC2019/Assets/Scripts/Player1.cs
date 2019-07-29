@@ -77,12 +77,11 @@ public class Player1 : MonoBehaviour
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Wall")
         {
 
-            GM.GetComponent<GameMaster>().Updateplayercount();
 
             if (Health == 1)
             {
                 Destroy(gameObject);
-   
+                GM.GetComponent<GameMaster>().Updateplayercount();
             }
 
             Health = Health - 1;
