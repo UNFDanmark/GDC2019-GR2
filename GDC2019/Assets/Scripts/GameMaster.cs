@@ -19,8 +19,29 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     public void Updateplayercount(string playername)
     {
-      
-        if (playername == "player1")
+
+
+        Setplayercountanddeth(playername);
+        Playercount = Playercount - 1;
+
+        if (Playercount == 1)
+        {
+            Winnerdata.winner = playername;
+            print(playername);
+            SceneManager.LoadScene("Winscreen");
+            print("spiller 1 drab: " + Winnerdata.klllsbyplayer1);
+            print("spiller 2 drab: " + Winnerdata.klllsbyplayer2);
+            print("spiller 3 drab: " + Winnerdata.klllsbyplayer3);
+            print("spiller 4 drab: " + Winnerdata.klllsbyplayer4);
+        }
+
+
+
+
+    }
+    void Setplayercountanddeth(string playername)
+    {
+         if (playername == "player1")
         {
             Winnerdata.player1place = Playercount;
             Winnerdata.dethtimeplayer1 = Time.time - startofgame;
@@ -41,21 +62,6 @@ public class GameMaster : MonoBehaviour
             Winnerdata.dethtimeplayer4 = Time.time - startofgame;
 
         }
-        Playercount = Playercount - 1;
-
-        if (Playercount == 1)
-        {
-            Winnerdata.winner = playername;
-            print(playername);
-            SceneManager.LoadScene("Winscreen");
-            print("spiller 1 drab: " + Winnerdata.klllsbyplayer1);
-            print("spiller 2 drab: " + Winnerdata.klllsbyplayer2);
-            print("spiller 3 drab: " + Winnerdata.klllsbyplayer3);
-            print("spiller 4 drab: " + Winnerdata.klllsbyplayer4);
-        }
-
-
-
-
     }
+
 }

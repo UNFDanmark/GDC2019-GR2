@@ -38,11 +38,12 @@ public class Bullets1 : MonoBehaviour
     void OnCollisionEnter(Collision a)
     {
 
+        if (a.gameObject.tag == "Wall" || a.gameObject.tag == "Player" || a.gameObject.tag == "Bullet" || a.gameObject.tag == " Asteroid")
+        {
+           
 
+            Destroy(gameObject);
 
-
-        Destroy(gameObject);
-
-
+        }
     }
 }

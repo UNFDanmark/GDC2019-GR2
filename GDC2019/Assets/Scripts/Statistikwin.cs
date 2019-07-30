@@ -19,21 +19,35 @@ public class Statistikwin : MonoBehaviour
         Statestikforplayer3.GetComponent<Text>().text = "player 3\n" + Winnerdata.player3place + "\n" + Winnerdata.dethtimeplayer3.ToString("F2")+" " + "sec.";
         Statestikforplayer4.GetComponent<Text>().text = "player 4\n" + Winnerdata.player4place + "\n" + Winnerdata.dethtimeplayer4.ToString("F2")+" " + "sec.";
 
+        float winnertime = Winnerdata.dethtimeplayer1;
+        if (Winnerdata.dethtimeplayer2 > winnertime)
+        {
+            winnertime = Winnerdata.dethtimeplayer2;
+        }
+        if (Winnerdata.dethtimeplayer3 > winnertime)
+        {
+            winnertime = Winnerdata.dethtimeplayer3;
+        }
+        if (Winnerdata.dethtimeplayer4 > winnertime)
+        {
+            winnertime = Winnerdata.dethtimeplayer4;
+        }
+
         if (Winnerdata.player1place == 0)
         {
-            Statestikforplayer1.GetComponent<Text>().text = "player1\nWin";
+            Statestikforplayer1.GetComponent<Text>().text = "player1\nWin\n"+winnertime.ToString("F2") + " sec.";
         }
         if (Winnerdata.player2place == 0)
         {
-            Statestikforplayer2.GetComponent<Text>().text = "player2\nWin";
+            Statestikforplayer2.GetComponent<Text>().text = "player2\nWin\n" + winnertime.ToString("F2") + " sec.";
         }
         if (Winnerdata.player3place == 0)
         {
-            Statestikforplayer3.GetComponent<Text>().text = "player3\nWin";
+            Statestikforplayer3.GetComponent<Text>().text = "player3\nWin\n" + winnertime.ToString("F2") + " sec.";
         }
         if (Winnerdata.player4place == 0)
         {
-            Statestikforplayer4.GetComponent<Text>().text = "player4\nWin";
+            Statestikforplayer4.GetComponent<Text>().text = "player4\nWin\n" + winnertime.ToString("F2") + " sec.";
         }
         Winnerdata.player1place = 0;
         Winnerdata.player2place = 0;

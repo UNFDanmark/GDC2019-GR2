@@ -33,6 +33,9 @@ public class astroidsspawnerscript : MonoBehaviour
                 GameObject Createdcommet = Instantiate(commet, new Vector3(xposition, 0, 90), Quaternion.identity);
                 Createdcommet.GetComponent<Meteor>().direction.z = -Random.Range(minforward, maxforward);
                 Createdcommet.GetComponent<Meteor>().direction.x = Random.Range(minsideways, maxsideways);
+                int sizemeteor = Random.Range(2, 30);
+                Createdcommet.transform.localScale = new Vector3(sizemeteor, sizemeteor, sizemeteor);
+
 
             }
             else if (selector == 1)
@@ -42,6 +45,9 @@ public class astroidsspawnerscript : MonoBehaviour
                 GameObject Createdcommet = Instantiate(commet, new Vector3(xposition, 0, -90), Quaternion.identity);
                 Createdcommet.GetComponent<Meteor>().direction.z = Random.Range(minforward, maxforward);
                 Createdcommet.GetComponent<Meteor>().direction.x = Random.Range(minsideways, maxsideways);
+                int sizemeteor = Random.Range(2, 30);
+                Createdcommet.transform.localScale = new Vector3(sizemeteor, sizemeteor, sizemeteor);
+
             }
             else if (selector == 2 )
             {
@@ -50,14 +56,19 @@ public class astroidsspawnerscript : MonoBehaviour
                 GameObject Createdcommet = Instantiate(commet, new Vector3(70,0,zposition), Quaternion.identity);
                 Createdcommet.GetComponent<Meteor>().direction.x = -Random.Range(minforward, maxforward);
                 Createdcommet.GetComponent<Meteor>().direction.z = Random.Range(minsideways, maxsideways);
-            
-        }
+                int sizemeteor = Random.Range(2, 30);
+                Createdcommet.transform.localScale = new Vector3(sizemeteor, sizemeteor, sizemeteor);
+
+            }
             else if (selector == 3)
             {
                 float zposition = Random.Range(-70, 70);
                 GameObject Createdcommet = Instantiate(commet, new Vector3(-70, 0, zposition), Quaternion.identity);
                 Createdcommet.GetComponent<Meteor>().direction.x = +Random.Range(minforward, maxforward);
                 Createdcommet.GetComponent<Meteor>().direction.z = Random.Range(minsideways, maxsideways);
+                int sizemeteor = Random.Range(2, 30);
+                Createdcommet.transform.localScale = new Vector3(sizemeteor, sizemeteor, sizemeteor);
+
             }
 
 
