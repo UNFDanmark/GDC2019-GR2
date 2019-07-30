@@ -7,8 +7,10 @@ public class GameMaster : MonoBehaviour
 {
     public float startofgame;
     public float Cameraspeed = 10f;
-
+    public AudioSource audioData;
+    public AudioClip saudioData;
     public int Playercount = 4;
+    bool ReadySound = true;
  
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,15 @@ public class GameMaster : MonoBehaviour
         startofgame = Time.time;
     }
 
+    void FixedUpdate()
+    {
+        
+        if (ReadySound = true && Playercount == 3)
+        {
+            audioData.PlayOneShot(saudioData);
+            ReadySound = false;
+        }
+    }
     // Update is called once per frame
     public void Updateplayercount(string playername)
     {
