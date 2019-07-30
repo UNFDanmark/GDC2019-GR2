@@ -8,6 +8,8 @@ public class Bullets4 : MonoBehaviour
     public float Speed = 10;
     float shootingtimer = 0;
     public float BulletsPrSecond;
+    public int PeacePeriod = 1;
+    float Starttime;
 
     // Use this for initialization
     void Start()
@@ -20,7 +22,7 @@ public class Bullets4 : MonoBehaviour
     {
 
 
-        if (shootingtimer > BulletsPrSecond)
+        if (shootingtimer > BulletsPrSecond && Time.time - Starttime > PeacePeriod)
         {
 
             Rigidbody clone;

@@ -275,6 +275,7 @@ MonoBehaviour:
   Spawnpoint: {fileID: 14316506}
   Speed: 10
   BulletsPrSecond: 0.3
+  PeacePeriod: 3
 --- !u!1 &59710518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,8 +1246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01d73efb84392b4b9f00c7fb4218365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cameraspeed: 10
-  savedTime: 0
 --- !u!1 &461848102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,6 +3068,7 @@ MonoBehaviour:
   Spawnpoint: {fileID: 1225737843}
   Speed: 10
   BulletsPrSecond: 0.3
+  PeacePeriod: 3
 --- !u!1 &1257826634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,7 +3139,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 20
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -3886,6 +3886,7 @@ MonoBehaviour:
   Spawnpoint: {fileID: 1635203762}
   Speed: 10
   BulletsPrSecond: 0.3
+  PeacePeriod: 3
 --- !u!1001 &1659664467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5088,3 +5089,4 @@ MonoBehaviour:
   Spawnpoint: {fileID: 8265939835598811796}
   Speed: 10
   BulletsPrSecond: 0.3
+  PeacePeriod: 3

@@ -14,10 +14,10 @@ public class Statistikwin : MonoBehaviour
     void Start()
     {
         //Statestik.GetComponent<Text>().text = Winnerdata.winner;
-        Statestikforplayer1.GetComponent<Text>().text = "player1\n"+Winnerdata.player1place+"\n"+Winnerdata.dethtimeplayer1;
-        Statestikforplayer2.GetComponent<Text>().text = "player2\n" + Winnerdata.player2place + "\n" + Winnerdata.dethtimeplayer2;
-        Statestikforplayer3.GetComponent<Text>().text = "player3\n" + Winnerdata.player3place + "\n" + Winnerdata.dethtimeplayer3;
-        Statestikforplayer4.GetComponent<Text>().text = "player4\n" + Winnerdata.player4place + "\n" + Winnerdata.dethtimeplayer4;
+        Statestikforplayer1.GetComponent<Text>().text = "player 1\n"+Winnerdata.player1place+"\n"+Winnerdata.dethtimeplayer1.ToString("F2")+" "+"sec.";
+        Statestikforplayer2.GetComponent<Text>().text = "player 2\n" + Winnerdata.player2place + "\n" + Winnerdata.dethtimeplayer2.ToString("F2")+" " + "sec.";
+        Statestikforplayer3.GetComponent<Text>().text = "player 3\n" + Winnerdata.player3place + "\n" + Winnerdata.dethtimeplayer3.ToString("F2")+" " + "sec.";
+        Statestikforplayer4.GetComponent<Text>().text = "player 4\n" + Winnerdata.player4place + "\n" + Winnerdata.dethtimeplayer4.ToString("F2")+" " + "sec.";
 
         if (Winnerdata.player1place == 0)
         {
