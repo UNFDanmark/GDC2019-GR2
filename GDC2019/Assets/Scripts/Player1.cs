@@ -52,7 +52,7 @@ public class Player1 : MonoBehaviour
             {
                   Flipper = !Flipper;
                 timeleft = time;
-                print(Flipper);
+
 
                 if (Flipper == true)
                 {

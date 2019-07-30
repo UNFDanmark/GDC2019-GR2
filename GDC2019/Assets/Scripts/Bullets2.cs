@@ -30,7 +30,6 @@ public class Bullets2 : MonoBehaviour
 
             clone.velocity = Spawnpoint.TransformDirection(Vector3.up * Speed);
             shootingtimer = 0;
-
         }
         shootingtimer += Time.deltaTime;
     }

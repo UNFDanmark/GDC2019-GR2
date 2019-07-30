@@ -138,7 +138,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 685749ca932e76b48ab8e60a189bbba9,
         type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: Asteroid
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 685749ca932e76b48ab8e60a189bbba9,
         type: 3}
