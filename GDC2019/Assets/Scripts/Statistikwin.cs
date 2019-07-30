@@ -35,19 +35,20 @@ public class Statistikwin : MonoBehaviour
 
         if (Winnerdata.player1place == 0)
         {
-            Statestikforplayer1.GetComponent<Text>().text = "Win\n" + winnertime.ToString("F2") + " sec.";
+            Statestikforplayer1.GetComponent<Text>().text = "Win\n" + "\n" + winnertime.ToString("F2") + " sec.";
+
         }
         if (Winnerdata.player2place == 0)
         {
-            Statestikforplayer2.GetComponent<Text>().text = "Win\n" + winnertime.ToString("F2") + " sec.";
+            Statestikforplayer2.GetComponent<Text>().text = "Win\n" + "\n" + winnertime.ToString("F2") + " sec.";
         }
         if (Winnerdata.player3place == 0)
         {
-            Statestikforplayer3.GetComponent<Text>().text = "Win\n" + winnertime.ToString("F2") + " sec.";
+            Statestikforplayer3.GetComponent<Text>().text = "Win\n" + "\n" + winnertime.ToString("F2") + " sec.";
         }
         if (Winnerdata.player4place == 0)
         {
-            Statestikforplayer4.GetComponent<Text>().text = "Win\n" + winnertime.ToString("F2") + " sec.";
+            Statestikforplayer4.GetComponent<Text>().text = "Win\n" + "\n" + winnertime.ToString("F2") + " sec.";
         }
         Winnerdata.player1place = 0;
         Winnerdata.player2place = 0;

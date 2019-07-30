@@ -21,7 +21,7 @@ public class Bullets1 : MonoBehaviour
     void Update()
     {
 
-        
+
         if (shootingtimer > BulletsPrSecond && Time.time - Starttime > PeacePeriod)
         {
 
@@ -40,7 +40,6 @@ public class Bullets1 : MonoBehaviour
 
         if (a.gameObject.tag == "Wall" || a.gameObject.tag == "Player" || a.gameObject.tag == "Bullet" || a.gameObject.tag == " Asteroid")
         {
-           
 
             Destroy(gameObject);
 
