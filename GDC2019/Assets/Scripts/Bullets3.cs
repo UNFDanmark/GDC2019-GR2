@@ -39,8 +39,13 @@ public class Bullets3 : MonoBehaviour
 
 
 
+        if (a.gameObject.tag == "Wall" || a.gameObject.tag == "Player" || a.gameObject.tag == "Bullet" || a.gameObject.tag == " Asteroid")
+        {
 
-        Destroy(this.gameObject);
+
+            Destroy(gameObject);
+
+        }
 
 
     }
