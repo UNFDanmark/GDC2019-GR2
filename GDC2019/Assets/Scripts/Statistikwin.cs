@@ -35,7 +35,7 @@ public class Statistikwin : MonoBehaviour
 
         if (Winnerdata.player1place == 0)
         {
-            Statestikforplayer1.GetComponent<Text>().text = "player1\nWin\n"+winnertime.ToString("F2") + " sec.";
+            Statestikforplayer1.GetComponent<Text>().text = "player1\nWin\n" +winnertime.ToString("F2") + " sec.";
         }
         if (Winnerdata.player2place == 0)
         {
