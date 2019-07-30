@@ -15,9 +15,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision a)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (a.gameObject.tag == "Wall" || a.gameObject.tag == "Player" || a.gameObject.tag == "Bullet" || a.gameObject.tag == " Asteroid")
         {
 
 

@@ -19,6 +19,7 @@ public class Player2 : MonoBehaviour
     public Material StandardMaterial;
     int FlashAmount;
     public int Flashes = 6;
+    public GameObject PlayerModel;
 
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class Player2 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        rd = GetComponent<Renderer>();
+        rd = PlayerModel.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
