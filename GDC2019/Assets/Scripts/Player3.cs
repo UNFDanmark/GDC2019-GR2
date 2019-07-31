@@ -99,6 +99,7 @@ public class Player3 : MonoBehaviour
                 }
                 Destroy(gameObject);
                 GM.GetComponent<GameMaster>().Updateplayercount("player3");
+                GameMaster.ReadySound = true;
             }
 
             Health = Health - 1;

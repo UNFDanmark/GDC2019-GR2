@@ -20,6 +20,8 @@ public class Player1 : MonoBehaviour
     int FlashAmount;
     public int Flashes = 6;
     public GameObject PlayerModel;
+    public AudioSource audioData;
+    public AudioClip saudioData;
 
     // Start is called before the first frame update
     public void Start()
@@ -27,6 +29,8 @@ public class Player1 : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         rd = PlayerModel.GetComponent<Renderer>();
+
+        GetComponent<GameMaster>();
     }
 
     // Update is called once per frame
@@ -83,7 +87,8 @@ public class Player1 : MonoBehaviour
             {
                 Destroy(gameObject);
                 GM.GetComponent<GameMaster>().Updateplayercount("player1");
-                if(collision.gameObject.name == "Bullet1 (Clone)")
+                GameMaster.ReadySound = true;
+                if (collision.gameObject.name == "Bullet1 (Clone)")
                 {
                    // Winnerdata.klllsbyplayer1 = Winnerdata.klllsbyplayer1;
                 }
