@@ -80,6 +80,8 @@ public class Player2 : MonoBehaviour
             {
                 Destroy(gameObject);
                 GM.GetComponent<GameMaster>().Updateplayercount("player2");
+                GameMaster.ReadySound = true;
+                
                 if (collision.gameObject.name == "Bullet1 (Clone)")
                 {
                     Winnerdata.klllsbyplayer1 = 1+ Winnerdata.klllsbyplayer1;

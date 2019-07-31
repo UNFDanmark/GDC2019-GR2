@@ -103,6 +103,7 @@ public class Player4 : MonoBehaviour
                 }
                 Destroy(gameObject);
                 GM.GetComponent<GameMaster>().Updateplayercount("player4");
+                GameMaster.ReadySound = true;
             }
 
             Health = Health - 1;

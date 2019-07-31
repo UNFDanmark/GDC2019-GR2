@@ -10,7 +10,7 @@ public class GameMaster : MonoBehaviour
     public AudioSource audioData;
     public AudioClip saudioData;
     public int Playercount = 4;
-    bool ReadySound = true;
+    public static bool ReadySound = true;
  
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class GameMaster : MonoBehaviour
         startofgame = Time.time;
     }
 
-    void FixedUpdate()
+    /*void FixedUpdate()
     {
         
         if (ReadySound = true && Playercount == 3)
@@ -26,7 +26,19 @@ public class GameMaster : MonoBehaviour
             audioData.PlayOneShot(saudioData);
             ReadySound = false;
         }
+        if (ReadySound = true && Playercount == 2)
+        {
+            audioData.PlayOneShot(saudioData);
+            ReadySound = false;
+        }
+        if (ReadySound = true && Playercount == 1)
+        {
+            audioData.PlayOneShot(saudioData);
+            ReadySound = false;
+        }
+
     }
+    */
     // Update is called once per frame
     public void Updateplayercount(string playername)
     {
