@@ -357,7 +357,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 715644a563e142c40941a02e7153a65c, type: 2}
+      objectReference: {fileID: 2100000, guid: cea39bea06740a14fbdb062e55655319, type: 2}
     m_RemovedComponents:
     - {fileID: 8265939834399865053, guid: f9023814a0932fb44b731128fe8d7c6b, type: 3}
     - {fileID: 8265939835606961895, guid: f9023814a0932fb44b731128fe8d7c6b, type: 3}
@@ -3618,7 +3618,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a7da7e1e882dad4f844a36a4619836a, type: 2}
+      objectReference: {fileID: 2100000, guid: 05cd6d5aef82a7440a0ea591eb6f3caa, type: 2}
     m_RemovedComponents:
     - {fileID: 8265939834399865053, guid: f9023814a0932fb44b731128fe8d7c6b, type: 3}
     - {fileID: 8265939835606961895, guid: f9023814a0932fb44b731128fe8d7c6b, type: 3}
@@ -4588,7 +4588,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 17cd20a785abe4f4d8fe1169226fa8dd, type: 2}
+      objectReference: {fileID: 2100000, guid: 42e11a1656bfc7d4498a79c56de3b376, type: 2}
     m_RemovedComponents:
     - {fileID: 8265939834399865053, guid: f9023814a0932fb44b731128fe8d7c6b, type: 3}
     - {fileID: 8265939835606961895, guid: f9023814a0932fb44b731128fe8d7c6b, type: 3}
@@ -5215,7 +5215,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.36832502, g: 0.8773585, b: 0.80940986, a: 1}
-  m_Intensity: 5
+  m_Intensity: 4
   m_Range: 19.528183
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5975,7 +5975,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 446868bce74a59f49a4545bbd9c1517c, type: 2}
+      objectReference: {fileID: 2100000, guid: e41847bcf525c4640b3a58f95a11c486, type: 2}
     - target: {fileID: 8265939834399865053, guid: f9023814a0932fb44b731128fe8d7c6b,
         type: 3}
       propertyPath: GM
